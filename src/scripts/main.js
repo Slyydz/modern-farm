@@ -5,6 +5,7 @@ import { createAsparagus } from "./seeds/asparagus.js";
 import { addPlant } from "./field.js";
 import { usePlants } from "./field.js";
 import { plantSeeds } from "./tractor.js";
+import { harvestPlants } from "./harvester.js";
 
 const cornVar = createCorn()
 const asparagusVar = createAsparagus();
@@ -28,3 +29,5 @@ const storePlants = usePlants();
 
 console.log(storePlants);
 
+
+console.log(harvestPlants(storePlants));
