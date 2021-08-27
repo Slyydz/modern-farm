@@ -1,32 +1,40 @@
+import { addPlantHarvest } from "/src/scripts/field.js";
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createCorn } from "./seeds/corn.js";
+import {createSunflower} from "./seeds/sunflower.js"
+import { createWheat } from "./seeds/wheat.js";
+import {createPotato} from "./seeds/potato.js"
+import {createSoybean} from "./seeds/soybean.js"
 
-const harvestArray = [];
+const asparagusObject = createAsparagus();
+const wheatObject = createWheat();
+const soybeanObject = createSoybean();
+const cornObject = createCorn();
+const potatoObject = createPotato();
+const sunflowerObject = createSunflower();
 
-export const harvestPlants = (plantArray) => {
-    for(const count of plantArray){
-        let countOutput = 0;
-        countOutput = plantArray.output;
-        for(countOutput of plantArray){
-            switch(plantArray.type){
+export const harvestPlants = (harvestPlan) => {
+    for (const count of harvestPlan){
+            switch(count.type){
                 case "Asparagus":
-                    addPlant(asparagusObject);
+                    addPlantHarvest(asparagusObject);
                     break;
                 case "Wheat":
-                    addPlant(wheatObject);
+                    addPlantHarvest(wheatObject);
                     break;
                 case "Soybean":
-                    addPlant(soybeanObject);
+                    addPlantHarvest(soybeanObject);
                 case "Corn":
-                    addPlant(cornObject);
+                    addPlantHarvest(cornObject);
                     break;
                 case "Potato":
-                    addPlant(potatoObject);
+                    addPlantHarvest(potatoObject);
                     break;
                 case "Sunflower":
-                    addPlant(sunflowerObject);
+                    addPlantHarvest(sunflowerObject);
                     break;
                 default:
                     console.log("Invalid Array Input")
             }
-        }
-    }
+         }
 }
