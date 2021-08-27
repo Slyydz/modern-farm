@@ -6,6 +6,7 @@ import { addPlant } from "./field.js";
 import { usePlants } from "./field.js";
 import { plantSeeds } from "./tractor.js";
 import { harvestPlants } from "./harvester.js";
+import { addPlantHarvest } from "./field.js";
 
 const cornVar = createCorn()
 const asparagusVar = createAsparagus();
@@ -28,6 +29,5 @@ plantSeeds(testArray);
 const storePlants = usePlants();
 
 console.log(storePlants);
-
 
 console.log(harvestPlants(storePlants));
